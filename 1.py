@@ -43,3 +43,5 @@ Katarina.pr()
 Pec = Dog(2, "Pec", 0.45)
 Pec.barking_per_day = 1000000000000000000000000
 Pec.pr()
+
+print("Hello update")
