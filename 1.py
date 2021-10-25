@@ -1,47 +1,45 @@
-class Main:
-    pass
-
-class Employee:
-    def forma_shulera(self):
-        print("Крминальный опыт - ", end='')
-
-    def forma_vora(self):
-        print("Украл - ", end='')
-
-    def forma_asasina(self):
-        print("Килы - ", end='')
+class Parentse:
+    def __init__(self, age=29, name="Mark", height=1.75):
+        self.age = age
+        self.name = name
+        self.height = height
 
 
-class Shuler(Employee):
-    def __init__(self, criminal_experience):
-        self.criminal_experience = criminal_experience
+class Son(Parentse):
+    strenght = 4
 
-    def info(self):
-        super().forma_shulera()
-        print(self.criminal_experience)
+    def set_strenght(self, s):
+        self.strenght = s
 
-class Vor(Employee):
-    def __init__(self, ukral):
-        self.ukral = ukral
+    def pr(self):
+        print(self.strenght)
 
-    def info(self):
-        super().forma_vora()
-        print(self.ukral)
+class Daughter(Parentse):
+    beaty = 10
 
-class Assassin(Employee):
-    def __init__(self, kills):
-        self.kills = kills
+    def set_beaty(self, b):
+        self.beaty = b
 
-    def info(self):
-        super().forma_asasina()
-        print(self.kills)
+    def pr(self):
+        print(self.beaty)
 
-#Djigit Alecksand Volkonovski
-Djigit = Shuler(3)
-Djigit.info()
+class Dog(Parentse):
+    barking_per_day = 10
 
-Aleksandr = Vor(3000)
-Aleksandr.info()
+    def set_barks(self, bar):
+        self.barking_per_day = bar
 
-Jeck = Assassin(27)
-Jeck.info()
+    def pr(self):
+        print(self.barking_per_day)
+
+Alex = Son(9, "John", 1.45)
+Alex.strenght = 10
+Alex.pr()
+
+Katarina = Daughter(12, "Katarina", 3.25)
+Katarina.beaty = 100
+Katarina.pr()
+
+Pec = Dog(2, "Pec", 0.45)
+Pec.barking_per_day = 1000000000000000000000000
+Pec.pr()
